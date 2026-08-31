@@ -2,7 +2,7 @@
 
 namespace DynamicItemSets\Form;
 
-use DynamicItemSets\Form\Element as DynamicItemSetsElement;
+use Common\Form\Element as CommonElement;
 use Laminas\Form\Fieldset;
 
 class SettingsFieldset extends Fieldset
@@ -21,7 +21,7 @@ class SettingsFieldset extends Fieldset
 
             ->add([
                 'name' => 'dynamicitemsets_item_sets_queries_static',
-                'type' => DynamicItemSetsElement\ArrayTextareaQueries::class,
+                'type' => CommonElement\ArrayQueriesTextarea::class,
                 'options' => [
                     'element_group' => 'editing',
                     'label' => 'Static item sets filled dynamically', // @translateAttach items to items sets according to queries
@@ -29,6 +29,7 @@ class SettingsFieldset extends Fieldset
                     'as_key_value' => true,
                     'remove_arguments_page_and_sort' => true,
                     'remove_arguments_useless' => true,
+                    'default_view' => 'querier',
                 ],
                 'attributes' => [
                     'id' => 'dynamicitemsets_item_sets_queries_static',

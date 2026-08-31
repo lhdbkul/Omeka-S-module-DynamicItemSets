@@ -15,7 +15,6 @@ return [
     ],
     'form_elements' => [
         'invokables' => [
-            Form\Element\ArrayTextareaQueries::class => Form\Element\ArrayTextareaQueries::class,
             Form\SettingsFieldset::class => Form\SettingsFieldset::class,
         ],
     ],
