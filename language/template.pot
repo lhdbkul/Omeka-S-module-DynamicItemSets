@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-02 00:00+0000\n"
+"POT-Creation-Date: 2026-08-31 00:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/scripts/upgrade.php:38 Module.php:44
+#: data/scripts/upgrade.php:38 Module.php:61
 #, php-format
 msgid "The module %1$s should be upgraded to version %2$s or later."
 msgstr ""
 
-#: data/scripts/upgrade.php:49
+#: data/scripts/upgrade.php:42 data/scripts/upgrade.php:60
+msgid "Missing requirement. Unable to upgrade."
+msgstr ""
+
+#: data/scripts/upgrade.php:52
 msgid ""
 "To avoid compatibility issue, the module {module} should be version "
 "{version} or greater."
 msgstr ""
 
-#: Module.php:55
+#: Module.php:74
 msgid ""
 "When present, the module requires module {module} version {version} or "
 "greater."
 msgstr ""
 
-#: Module.php:262 Module.php:301
+#: Module.php:286 Module.php:325
 msgid "Is dynamic"
 msgstr ""
 
@@ -42,13 +46,13 @@ msgstr ""
 msgid "Search dynamic item sets"
 msgstr ""
 
-#: data/scripts/upgrade.php:75
+#: data/scripts/upgrade.php:83
 msgid ""
 "The attached items to an item set are no more detached when the query is "
 "removed."
 msgstr ""
 
-#: data/scripts/upgrade.php:80
+#: data/scripts/upgrade.php:88
 msgid ""
 "A new setting allows to set static item sets filled dynamically. When an "
 "item is saved, it will be included in item sets matching queries. Unlike "
@@ -56,36 +60,48 @@ msgid ""
 "when the metadata does not match a query any more."
 msgstr ""
 
-#: Module.php:534
+#: Module.php:565
 msgid "The query to attach items cannot contain the item set itself."
 msgstr ""
 
-#: Module.php:564
+#: Module.php:595
 msgid ""
 "The query for the item set was changed: a job is run in background to detach "
 "and to attach items (job {link_job}#{job_id}{link_end}, {link_log}"
 "logs{link_end})."
 msgstr ""
 
-#: Module.php:675
+#: Module.php:703
 msgid ""
 "Query to make this item set dynamic in order to include and to exclude items "
 "automatically"
 msgstr ""
 
-#: Module.php:697
+#: Module.php:725
 msgid "Dynamic item sets: Reindex item sets"
 msgstr ""
 
-#: Module.php:705
+#: Module.php:731
+msgid "Dynamic item sets: Reindex"
+msgstr ""
+
+#: Module.php:732
+msgid "Reindex the items contained in dynamic item sets."
+msgstr ""
+
+#: Module.php:734
+msgid "Reindex"
+msgstr ""
+
+#: Module.php:745
 msgid "Options to reindex dynamic item sets"
 msgstr ""
 
-#: Module.php:716
+#: Module.php:756
 msgid "Run events"
 msgstr ""
 
-#: Module.php:717
+#: Module.php:757
 msgid ""
 "This option is used to reindex external search engine at the same time, but "
 "it is generally simpler to reindex it separately."

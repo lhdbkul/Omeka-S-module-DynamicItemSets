@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-02 00:00+0000\n"
+"POT-Creation-Date: 2026-08-31 00:00+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Daniel Berthereau <Daniel.fr@Berthereau.net>\n"
 "Language-Team: \n"
@@ -15,14 +15,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
-#: data/scripts/upgrade.php:38 Module.php:44
+#: data/scripts/upgrade.php:38 Module.php:61
 #, php-format
 msgid "The module %1$s should be upgraded to version %2$s or later."
 msgstr "Le module %1$s doit être mis à niveau à la version %2$s ou supérieure."
 
-#: data/scripts/upgrade.php:49
+#: data/scripts/upgrade.php:42 data/scripts/upgrade.php:60
+msgid "Missing requirement. Unable to upgrade."
+msgstr "Pré-requis absent. Impossible de mettre à jour."
+
+#: data/scripts/upgrade.php:52
 msgid ""
 "To avoid compatibility issue, the module {module} should be version "
 "{version} or greater."
@@ -30,7 +34,7 @@ msgstr ""
 "Pour éviter des problèmes de compatibilités, le module {module} doit mis à "
 "niveau à la version {version} ou supérieure."
 
-#: Module.php:55
+#: Module.php:74
 msgid ""
 "When present, the module requires module {module} version {version} or "
 "greater."
@@ -38,7 +42,7 @@ msgstr ""
 "Lorsqu’il est présent, le module nécessite que le module {module} soit mis à "
 "niveau à la version {version} ou supérieure."
 
-#: Module.php:262 Module.php:301
+#: Module.php:286 Module.php:325
 msgid "Is dynamic"
 msgstr "Est dynamique"
 
@@ -46,7 +50,7 @@ msgstr "Est dynamique"
 msgid "Search dynamic item sets"
 msgstr "Rechercher les collections dynamiques"
 
-#: data/scripts/upgrade.php:75
+#: data/scripts/upgrade.php:83
 msgid ""
 "The attached items to an item set are no more detached when the query is "
 "removed."
@@ -54,7 +58,7 @@ msgstr ""
 "Les contenus attachés à une collection ne sont plus détachés quand la "
 "requête est supprimée."
 
-#: data/scripts/upgrade.php:80
+#: data/scripts/upgrade.php:88
 msgid ""
 "A new setting allows to set static item sets filled dynamically. When an "
 "item is saved, it will be included in item sets matching queries. Unlike "
@@ -67,13 +71,13 @@ msgstr ""
 "dynamiques, un contenu ne sera pas retiré d’une collection automatiquement "
 "quand ses métadonnées ne correspondent plus à la requête."
 
-#: Module.php:534
+#: Module.php:565
 msgid "The query to attach items cannot contain the item set itself."
 msgstr ""
 "La requête pour attacher les contenus ne peut pas contenir la collection "
 "elle-même."
 
-#: Module.php:564
+#: Module.php:595
 msgid ""
 "The query for the item set was changed: a job is run in background to detach "
 "and to attach items (job {link_job}#{job_id}{link_end}, {link_log}"
@@ -83,7 +87,7 @@ msgstr ""
 "plan pour détacher et attacher les contenus ({link_job}tâche #{job_id}"
 "{link_end}, {link_log}journaux{link_end})."
 
-#: Module.php:675
+#: Module.php:703
 msgid ""
 "Query to make this item set dynamic in order to include and to exclude items "
 "automatically"
@@ -91,19 +95,33 @@ msgstr ""
 "Requête pour rendre la collection dynamique afin d’inclure ou exclure les "
 "contenus automatiquement"
 
-#: Module.php:697
+#: Module.php:725
 msgid "Dynamic item sets: Reindex item sets"
 msgstr "Collections dynamiques : Ré-indexer les collections"
 
-#: Module.php:705
+#: Module.php:731
+#, fuzzy
+#| msgid "Dynamic item sets: Reindex item sets"
+msgid "Dynamic item sets: Reindex"
+msgstr "Collections dynamiques : Ré-indexer les collections"
+
+#: Module.php:732
+msgid "Reindex the items contained in dynamic item sets."
+msgstr "Ré-indexer les contenus des collections dynamiques"
+
+#: Module.php:734
+msgid "Reindex"
+msgstr "Ré-indexer"
+
+#: Module.php:745
 msgid "Options to reindex dynamic item sets"
 msgstr "Options pour ré-indexer les collections dynamiques"
 
-#: Module.php:716
+#: Module.php:756
 msgid "Run events"
 msgstr "Déclencher les événements"
 
-#: Module.php:717
+#: Module.php:757
 msgid ""
 "This option is used to reindex external search engine at the same time, but "
 "it is generally simpler to reindex it separately."
